@@ -11,6 +11,8 @@ var wrongGuesses = [];
 var correctGuesses = [];
 var guesses = ["placeHolder"];
 var newLetter = false;
+var wins = 0;
+var losses = 0;
 
 
 //=================================
@@ -20,8 +22,18 @@ var newLetter = false;
 //Function that selects a random word from the list
  function selectWord() {
     selectedWord = wordList[Math.floor(Math.random() * wordList.length)];   
+    resetGame();
     console.log(selectedWord);
 }
+
+function resetGame() {
+    guessesRemaining = 5;
+    wrongGuesses = [];
+    correctGuesses = [];
+    guesses = ["placeHolder"];
+    newLetter = false;
+}
+    
 
 function checkGuess(keyPress) {
     //Checking if letter has baeen guessed before
@@ -52,11 +64,19 @@ function checkGuess(keyPress) {
                 if (keyPress.key === selectedWord[i]) {
                     correctGuesses.push(keyPress.key);
                     newLetter = false;
+                        if (selectedWord.length == correctGuesses.length) {
+                            alert("Congratulations! You Win!");
+                            wins = wins + 1;
+                        }
                     break;
                 } else if (keyPress.key !== selectedWord[i] && i == selectedWord.length) {
                     newLetter = false;
                     guessesRemaining = guessesRemaining - 1;
                     wrongGuesses.push(keyPress.key);
+                        if(guessesRemaining == 0) {
+                            alert("Game Over");
+                            losses = losses + 1
+                        }
                     break;
                 } else {}
             };
@@ -64,6 +84,8 @@ function checkGuess(keyPress) {
             console.log("correctGuesses: " + correctGuesses);
             console.log("wrongGuesses: " + wrongGuesses);
             console.log("remainingGuesses :" + guessesRemaining);
+            console.log("wins " + wins);
+            console.log("losses " + losses);
         }
 }
         //===================
