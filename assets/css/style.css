@@ -26,13 +26,30 @@
     margin-bottom: 15px;
 }
 
-#gameBox {
+#gameWrapper {
     display: block;
     position: relative;
     width: 66.66%;
     min-height: 30vh;
     margin: 10px auto;
     border: 1px solid black;
+}
+
+#gameBox {
+    display: block;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    border: 1px solid green;
+    padding: 0;
+}
+
+#gameBox div {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 40px;
 }
 
 #newGameButton {
@@ -61,3 +78,5 @@ footer {
     background-color: rgb(29, 29, 94);
     color: #ffffff;
 }
+
+
