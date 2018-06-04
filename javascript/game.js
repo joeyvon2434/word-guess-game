@@ -24,6 +24,7 @@ var losses = 0;
     selectedWord = wordList[Math.floor(Math.random() * wordList.length)];   
     resetGame();
     console.log(selectedWord);
+    populateGameBox();
 }
 
 function resetGame() {
@@ -40,7 +41,6 @@ function checkGuess(keyPress) {
         
 //=======================
     //Checking guesses
-//=======================
 
     //Check if letter has already been guessed
         for (i = 0; i < guesses.length + 1; i++) {
@@ -88,8 +88,26 @@ function checkGuess(keyPress) {
             console.log("losses " + losses);
         }
 }
+
+
+//Function to check the number of letters and populate the gameBox with the right number of blank spaces
+
+function populateGameBox(characterCount) {
+    document.getElementById("gameBox").innerHTML = "";
+
+ for (i = 0; i < selectedWord.length; i++){
+    var newText = document.createTextNode(selectedWord[i]);
+    var newDiv = document.createElement ("div");
+    newDiv.appendChild(newText);
+    document.getElementById("gameBox").appendChild(newDiv);
+ }
+}
+
+
+
+
+
         //===================
         //Call Functions Here
         //===================
-selectWord();
 addEventListener("keyup", checkGuess)
