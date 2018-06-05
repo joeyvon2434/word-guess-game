@@ -6,7 +6,7 @@
 
 var wordList = ["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "fart", "gazorpazorpfield", "birdperson", "snowball", "mr meseeks", "schwifty", "beth", "unity", "evil morty", "cronenberg rick", "cronenberg morty", "scary terry", "abradolf lincler", "blim blam","crocubot", "piece of toast", "scroopy noopers", "photography raptor", "sleepy gary", "shrimply pibbles"];
 var selectedWord = 'hangman';
-var guessesRemaining = 6;
+var guessesRemaining;
 var wrongGuesses = [];
 var correctGuesses = [" "];
 var guesses = ["placeHolder"];
@@ -85,7 +85,7 @@ function checkGuess(keyPress) {
                             
                         }
                     break;
-                } else if (keyPress.key !== selectedWord[i] && i == selectedWord.length) {
+                } else if (keyPress.key !== selectedWord[i] && i == selectedWord.length -1) {
                     newLetter = false;
                     guessesRemaining = guessesRemaining - 1;
                     wrongGuesses.push(keyPress.key);
@@ -135,8 +135,7 @@ function populateGameBox(characterCount) {
  var blank = document.getElementsByTagName("div");
  for (i = 4; i < selectedWord.length + 4; i++) {
      if (selectedWord[i - 4] === " ") {
-         blank[i].style.borderBottom = "2px solid transparent"
-         console.log("the loop worked");
+         blank[i].style.borderBottom = "2px solid transparent";
      } else {
     blank[i].style.color = "transparent";
     blank[i].style.borderBottom = "2px solid black";
