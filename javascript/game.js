@@ -4,11 +4,11 @@
 
 //List of global variables
 
-var wordList = ["top gun"]; //["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "fart", "gazorpazorpfield", "birdperson", "snowball", "meseeks", "schwifty", "beth"];
+var wordList = ["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "fart", "gazorpazorpfield", "birdperson", "snowball", "mr meseeks", "schwifty", "beth", "unity", "evil morty", "cronenberg rick", "cronenberg morty", "scary terry", "abradolf lincler", "blim blam","crocubot"];
 var selectedWord = 'hangman';
 var guessesRemaining = 6;
 var wrongGuesses = [];
-var correctGuesses = [];
+var correctGuesses = [" "];
 var guesses = ["placeHolder"];
 var newLetter = false;
 var wins = 0;
