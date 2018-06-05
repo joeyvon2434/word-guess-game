@@ -26,6 +26,7 @@ var victoryArray = ["placeHolder"]
     resetGame();
     populateGameBox();
     generateVictoryArray();
+    console.log(selectedWord);
 }
 
 function resetGame() {
@@ -41,6 +42,7 @@ function resetGame() {
 function checkGuess(keyPress) {
     //Checking if letter has baeen guessed before
         console.log(keyPress.key);
+        var showLetter = document.getElementsByTagName("div");
 //=======================
     //Checking guesses
 
@@ -69,15 +71,23 @@ function checkGuess(keyPress) {
                         if (correctGuesses.length + 1 == victoryArray.length) {
                             alert("Congratulations! You Win!");
                             wins = wins + 1;
+                            document.getElementById("winsBox").innerHTML = ("Wins: " + wins);
+                            
                         }
                     break;
                 } else if (keyPress.key !== selectedWord[i] && i == selectedWord.length) {
                     newLetter = false;
                     guessesRemaining = guessesRemaining - 1;
                     wrongGuesses.push(keyPress.key);
+                    document.getElementById("guessesRemainingBox").innerHTML = ("Guesses Remaining: " + guessesRemaining);
                         if(guessesRemaining == 0) {
                             alert("Game Over");
-                            losses = losses + 1
+                            losses = losses + 1;
+                            document.getElementById("lossesBox").innerHTML = ("Losses: " + losses);
+                            for (k = 4; k < selectedWord.length + 4; k++) {
+                                
+                               showLetter[k].style.color = "black";
+                               };
                         }
                     break;
                 } else {}
@@ -90,7 +100,7 @@ function checkGuess(keyPress) {
             console.log("losses " + losses);
         }
 
-        var showLetter = document.getElementsByTagName("div");
+        
  for (i = 4; i < selectedWord.length + 4; i++) {
      if (keyPress.key == showLetter[i].innerHTML) {
     showLetter[i].style.color = "black";
