@@ -120,7 +120,7 @@ function checkGuess(keyPress) {
 
 
 //Function to check the number of letters and populate the gameBox with the right number of blank spaces
-
+//===========================
 function populateGameBox(characterCount) {
     document.getElementById("gameBox").innerHTML = "";
 
@@ -141,7 +141,7 @@ function populateGameBox(characterCount) {
 }
 
 //Make Function to check for victory
-
+//===========================
 function generateVictoryArray () {
     for (i = 0; i < selectedWord.length; i++) {
         for (j = 0; j < victoryArray.length; j++) {
