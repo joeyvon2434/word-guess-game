@@ -4,7 +4,7 @@
 
 //List of global variables
 
-var wordList = ["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "fart", "gazorpazorpfield", "birdperson", "snowball", "meseeks", "schwifty", "beth"];
+var wordList = ["top gun"]; //["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "fart", "gazorpazorpfield", "birdperson", "snowball", "meseeks", "schwifty", "beth"];
 var selectedWord = 'hangman';
 var guessesRemaining = 6;
 var wrongGuesses = [];
@@ -32,7 +32,7 @@ var victoryArray = ["placeHolder"]
 function resetGame() {
     guessesRemaining = 6;
     wrongGuesses = [];
-    correctGuesses = [];
+    correctGuesses = [" "];
     guesses = [" "];
     newLetter = false;
     victoryArray = [" "];
@@ -73,12 +73,12 @@ function checkGuess(keyPress) {
         //See if letter is correct or incorrect
         if (newLetter == true) {
 
-            for (i = 0; i < selectedWord.length + 1; i++) {
+            for (i = 0; i < selectedWord.length; i++) {
 
                 if (keyPress.key === selectedWord[i]) {
                     correctGuesses.push(keyPress.key);
                     newLetter = false;
-                        if (correctGuesses.length + 1 == victoryArray.length) {
+                        if (correctGuesses.length == victoryArray.length) {
                             alert("Congratulations! You Win! Wubba Lubba Dub Dub!!!");
                             wins = wins + 1;
                             document.getElementById("winsBox").innerHTML = ("Wins: " + wins);
@@ -134,8 +134,12 @@ function populateGameBox(characterCount) {
 
  var blank = document.getElementsByTagName("div");
  for (i = 4; i < selectedWord.length + 4; i++) {
+     if (selectedWord[i] === " ") {
+         blank[i].style.borderBottom = "2px solid transparent"
+     } else {
     blank[i].style.color = "transparent";
     blank[i].style.borderBottom = "2px solid black";
+     }
  };
  
 }
