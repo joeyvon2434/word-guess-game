@@ -24,7 +24,6 @@ var victoryArray = ["placeHolder"]
  function selectWord() {
     selectedWord = wordList[Math.floor(Math.random() * wordList.length)];   
     resetGame();
-    console.log(selectedWord);
     populateGameBox();
     generateVictoryArray();
 }
@@ -132,7 +131,7 @@ function generateVictoryArray () {
             } else if (selectedWord[i] !== victoryArray[j] && j + 1 == victoryArray.length) {
                 victoryArray.push(selectedWord[i]);
             } else {}
-    } console.log(victoryArray);
+    };
 }
 }
 
