@@ -4,9 +4,9 @@
 
 //List of global variables
 
-var wordList = ["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "fart", "gazorpazorpfield", "birdperson", "snowball", "meseeks"];
+var wordList = ["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "fart", "gazorpazorpfield", "birdperson", "snowball", "meseeks", "schwifty", "beth"];
 var selectedWord = 'hangman';
-var guessesRemaining = 5;
+var guessesRemaining = 6;
 var wrongGuesses = [];
 var correctGuesses = [];
 var guesses = ["placeHolder"];
@@ -30,7 +30,7 @@ var victoryArray = ["placeHolder"]
 }
 
 function resetGame() {
-    guessesRemaining = 5;
+    guessesRemaining = 6;
     wrongGuesses = [];
     correctGuesses = [];
     guesses = [" "];
