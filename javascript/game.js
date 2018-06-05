@@ -4,7 +4,7 @@
 
 //List of global variables
 
-var wordList = ["cat", "dog", "monkey", "salamander"];
+var wordList = ["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "fart", "gazorpazorpfield", "birdperson", "snowball", "meseeks"];
 var selectedWord = 'hangman';
 var guessesRemaining = 5;
 var wrongGuesses = [];
@@ -34,13 +34,13 @@ function resetGame() {
     correctGuesses = [];
     guesses = ["placeHolder"];
     newLetter = false;
-    victoryArray = ["placeHolder"]
+    victoryArray = ["placeHolder"];
 }
     
 
 function checkGuess(keyPress) {
     //Checking if letter has baeen guessed before
-        
+        console.log(keyPress.key);
 //=======================
     //Checking guesses
 
@@ -55,7 +55,6 @@ function checkGuess(keyPress) {
                 newLetter = true;
                 break;
             } else {} //goes to the next i value because all previously guessed letters have not been checked
-            
 
         };
 

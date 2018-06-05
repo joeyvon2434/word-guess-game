@@ -51,6 +51,38 @@
     font-size: 40px;
 }
 
+#guessedLettersBox {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    border: 1px solid red;
+}
+
+#guesedLettersBox div{
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+#statsBox {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    text-align: center;
+    border: 1px solid green;
+}
+
+#statsBox div {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
 #newGameButton {
     display: block;
     margin-left: auto;
