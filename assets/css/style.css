@@ -58,12 +58,12 @@
     border: 1px solid red;
 }
 
-#guesedLettersBox div{
+#guessedLettersBox div{
     display: inline-block;
     text-align: center;
     margin: 0 5px;
-    padding: 10px;
-    font-size: 30px;
+    padding: 5px;
+    font-size: 20px;
 }
 
 #statsBox {

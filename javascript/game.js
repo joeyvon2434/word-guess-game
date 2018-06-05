@@ -33,9 +33,11 @@ function resetGame() {
     guessesRemaining = 5;
     wrongGuesses = [];
     correctGuesses = [];
-    guesses = ["placeHolder"];
+    guesses = [" "];
     newLetter = false;
-    victoryArray = ["placeHolder"];
+    victoryArray = [" "];
+    document.getElementById("guessedLettersBox").innerHTML = "Letters Guessed: ";
+
 }
     
 
@@ -44,7 +46,8 @@ function checkGuess(keyPress) {
         console.log(keyPress.key);
         var showLetter = document.getElementsByTagName("div");
 //=======================
-    //Checking guesses
+    
+//Checking guesses
 
     //Check if letter has already been guessed
         for (i = 0; i < guesses.length + 1; i++) {
@@ -59,6 +62,12 @@ function checkGuess(keyPress) {
             } else {} //goes to the next i value because all previously guessed letters have not been checked
 
         };
+
+        //Add guess to screen
+        var newTextA = document.createTextNode(guesses[guesses.length - 1]);
+        var newDivA = document.createElement ("div");
+        newDivA.appendChild(newTextA);
+        document.getElementById("guessedLettersBox").appendChild(newDivA);
 
         //See if letter is correct or incorrect
         if (newLetter == true) {
