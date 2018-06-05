@@ -55,7 +55,6 @@
     display: block;
     width: 50%;
     margin: 10px auto;
-    border: 1px solid red;
 }
 
 #guessedLettersBox div{
@@ -71,7 +70,6 @@
     width: 60%;
     margin: 10px auto;
     text-align: center;
-    border: 1px solid green;
 }
 
 #statsBox div {
@@ -85,8 +83,7 @@
 
 #newGameButton {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 40px auto 20px auto;
     width: 15%;
     padding-top: 10px;
     padding-bottom: 10px;
