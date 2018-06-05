@@ -40,14 +40,13 @@
     position: relative;
     margin: auto;
     text-align: center;
-    border: 1px solid green;
     padding: 0;
 }
 
 #gameBox div {
     display: inline-block;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 5px;
     padding: 10px;
     font-size: 40px;
 }

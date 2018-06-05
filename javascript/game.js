@@ -87,6 +87,13 @@ function checkGuess(keyPress) {
             console.log("wins " + wins);
             console.log("losses " + losses);
         }
+
+        var showLetter = document.getElementsByTagName("div");
+ for (i = 4; i < selectedWord.length + 4; i++) {
+     if (keyPress.key == showLetter[i].innerHTML) {
+    showLetter[i].style.color = "black";
+        }
+    };
 }
 
 
@@ -100,7 +107,15 @@ function populateGameBox(characterCount) {
     var newDiv = document.createElement ("div");
     newDiv.appendChild(newText);
     document.getElementById("gameBox").appendChild(newDiv);
- }
+
+ };
+
+ var blank = document.getElementsByTagName("div");
+ for (i = 4; i < selectedWord.length + 4; i++) {
+    blank[i].style.color = "transparent";
+    blank[i].style.borderBottom = "2px solid black";
+ };
+ 
 }
 
 
@@ -110,4 +125,4 @@ function populateGameBox(characterCount) {
         //===================
         //Call Functions Here
         //===================
-addEventListener("keyup", checkGuess)
+addEventListener("keyup", checkGuess);
