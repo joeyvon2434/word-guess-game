@@ -37,6 +37,7 @@ function resetGame() {
     newLetter = false;
     victoryArray = [" "];
     document.getElementById("guessedLettersBox").innerHTML = "Letters Guessed: ";
+    document.getElementById("guessesRemainingBox").innerHTML = ("Guesses Remaining: " + guessesRemaining);
 
 }
     
@@ -78,7 +79,7 @@ function checkGuess(keyPress) {
                     correctGuesses.push(keyPress.key);
                     newLetter = false;
                         if (correctGuesses.length + 1 == victoryArray.length) {
-                            alert("Congratulations! You Win!");
+                            alert("Congratulations! You Win! Wubba Lubba Dub Dub!!!");
                             wins = wins + 1;
                             document.getElementById("winsBox").innerHTML = ("Wins: " + wins);
                             
@@ -90,7 +91,7 @@ function checkGuess(keyPress) {
                     wrongGuesses.push(keyPress.key);
                     document.getElementById("guessesRemainingBox").innerHTML = ("Guesses Remaining: " + guessesRemaining);
                         if(guessesRemaining == 0) {
-                            alert("Game Over");
+                            alert("You must drink more than Rick. Game Over!");
                             losses = losses + 1;
                             document.getElementById("lossesBox").innerHTML = ("Losses: " + losses);
                             for (k = 4; k < selectedWord.length + 4; k++) {
@@ -152,9 +153,6 @@ function generateVictoryArray () {
     };
 }
 }
-
-
-
 
         //===================
         //Call Functions Here
