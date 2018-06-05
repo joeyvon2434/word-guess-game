@@ -134,8 +134,9 @@ function populateGameBox(characterCount) {
 
  var blank = document.getElementsByTagName("div");
  for (i = 4; i < selectedWord.length + 4; i++) {
-     if (selectedWord[i] === " ") {
+     if (selectedWord[i - 4] === " ") {
          blank[i].style.borderBottom = "2px solid transparent"
+         console.log("the loop worked");
      } else {
     blank[i].style.color = "transparent";
     blank[i].style.borderBottom = "2px solid black";
