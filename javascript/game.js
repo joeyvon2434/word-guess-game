@@ -4,7 +4,7 @@
 
 //List of global variables
 
-var wordList = ["cat", "dog", "monkey"];
+var wordList = ["cat", "dog", "monkey", "salamander"];
 var selectedWord = 'hangman';
 var guessesRemaining = 5;
 var wrongGuesses = [];
@@ -13,6 +13,7 @@ var guesses = ["placeHolder"];
 var newLetter = false;
 var wins = 0;
 var losses = 0;
+var victoryArray = ["placeHolder"]
 
 
 //=================================
@@ -25,6 +26,7 @@ var losses = 0;
     resetGame();
     console.log(selectedWord);
     populateGameBox();
+    generateVictoryArray();
 }
 
 function resetGame() {
@@ -33,6 +35,7 @@ function resetGame() {
     correctGuesses = [];
     guesses = ["placeHolder"];
     newLetter = false;
+    victoryArray = ["placeHolder"]
 }
     
 
@@ -54,6 +57,7 @@ function checkGuess(keyPress) {
                 break;
             } else {} //goes to the next i value because all previously guessed letters have not been checked
             
+
         };
 
         //See if letter is correct or incorrect
@@ -64,7 +68,7 @@ function checkGuess(keyPress) {
                 if (keyPress.key === selectedWord[i]) {
                     correctGuesses.push(keyPress.key);
                     newLetter = false;
-                        if (selectedWord.length == correctGuesses.length) {
+                        if (correctGuesses.length + 1 == victoryArray.length) {
                             alert("Congratulations! You Win!");
                             wins = wins + 1;
                         }
@@ -118,6 +122,19 @@ function populateGameBox(characterCount) {
  
 }
 
+//Make Function to check for victory
+
+function generateVictoryArray () {
+    for (i = 0; i < selectedWord.length; i++) {
+        for (j = 0; j < victoryArray.length; j++) {
+            if (selectedWord[i] == victoryArray[j]) {
+                break;
+            } else if (selectedWord[i] !== victoryArray[j] && j + 1 == victoryArray.length) {
+                victoryArray.push(selectedWord[i]);
+            } else {}
+    } console.log(victoryArray);
+}
+}
 
 
 
