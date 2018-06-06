@@ -4,7 +4,7 @@
 
 //List of global variables
 
-var wordList = ["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "fart", "gazorpazorpfield", "birdperson", "snowball", "mr meseeks", "schwifty", "beth", "unity", "evil morty", "cronenberg rick", "cronenberg morty", "scary terry", "abradolf lincler", "blim blam","crocubot", "piece of toast", "scroopy noopers", "photography raptor", "sleepy gary", "shrimply pibbles"];
+var wordList = ["rick", "morty", "summer", "jerry", "drunk", "squanchy", "gearhead", "nebulon", "gazorpazorpfield", "birdperson", "snowball", "mr meseeks", "schwifty", "beth", "unity", "evil morty", "cronenberg rick", "cronenberg morty", "scary terry", "abradolf lincler", "blim blam","crocubot", "piece of toast", "scroopy noopers", "photography raptor", "sleepy gary", "shrimply pibbles"];
 var selectedWord = 'hangman';
 var guessesRemaining;
 var wrongGuesses = [];
