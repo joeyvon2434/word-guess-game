@@ -58,15 +58,15 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     position: relative;
     margin: auto;
     text-align: center;
-    padding: 30px;
+    padding: 50px;
 }
 
 #gameBox div {
     display: inline-block;
     text-align: center;
     margin: 0 4px;
-    padding: 7px;
-    font-size: 40px;
+    padding: 10px;
+    font-size: 30px;
     font-family: 'Permanent Marker', arial, sans-serif;
 }
 
