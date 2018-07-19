@@ -118,7 +118,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     background: linear-gradient(red, rgb(245, 81, 81));
     color: black;
     box-shadow: 5px 5px 5px black;
-    curson: pointer;
+    cursor: pointer;
 }
 
 #newGameButton:after{
